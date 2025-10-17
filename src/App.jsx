@@ -10,21 +10,21 @@ function App() {
     <>
       <header>
         <div className="container">
-          <div className="nav-wrap">
-            <div className="logo-wrap">
+          <div className="nav-wrap flex items-center py-4 justify-between">
+            <div className="logo-wra max-w-[138px]">
               <a href="#">
                 <img src={brandLogo} alt="logo" />
               </a>
             </div>
             <div className="dropdown-menu">
-              <a href="#" className='dropdown-menu-link'>
-                <div className="icon-wrap">
+              <a href="#" className='dropdown-menu-link text-white flex justify-between items-center gap-2 rounded-lg bg-neutral-700 px-2 py-1.5 text-sm'>
+                <div className="icon-wrap flex gap-1">
                   <img src={iconUnits} alt="" />
                   Units
                 </div>
                 <img src={iconDropdown} alt="" />
               </a>
-              <ul className='dropdown-items'>
+              <ul className='dropdown-items hidden'>
                 <li><a href="#">Switch to imperial</a></li>
                 <li>Temperature</li>
                 <li><input type="radio" id="celcius" name="temperature" value="celcius" /><label for="celcius">Celsius (°C) </label></li>
