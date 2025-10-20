@@ -30,7 +30,7 @@
         @apply bg-neutral-900;
     }
     body,p,a{
-        @apply text-lg;
+        @apply text-base lg:text-lg;
     }
 
     .container{
@@ -38,26 +38,26 @@
     }
 
     h1 {
-        @apply font-extrabold text-5xl;
+        @apply font-extrabold text-[54px]/[1.2] font-bricolagegrotesque;
     }
 
     h2 {
-        @apply font-medium text-4xl;
+        @apply font-extrabold text-[28px]/[1.2] lg:text-4xl;
     }
 
     h3 {
-        @apply font-medium text-3xl;
+        @apply font-medium text-3xl font-bricolagegrotesque;
     }
 
     h4 {
-        @apply font-bold text-2xl;
+        @apply font-bold text-2xl font-bricolagegrotesque;
     }
 
     h5 {
-        @apply font-bold text-xl;
+        @apply font-bold text-xl font-bricolagegrotesque;
     }
 
     h6 {
-        @apply font-bold text-lg;
+        @apply font-bold text-lg font-bricolagegrotesque;
     }
 }

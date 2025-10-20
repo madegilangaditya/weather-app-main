@@ -3,6 +3,8 @@ import brandLogo from './assets/images/logo.svg'
 import iconUnits from './assets/images/icon-units.svg'
 import iconDropdown from './assets/images/icon-dropdown.svg'
 import iconSunny from './assets/images/icon-sunny.webp'
+import iconSearch from './assets/images/icon-search.svg'
+import bgTodaySmall from './assets/images/bg-today-small.svg'
 
 function App() {
 
@@ -16,7 +18,7 @@ function App() {
                 <img src={brandLogo} alt="logo" />
               </a>
             </div>
-            <div className="dropdown-menu">
+            <div className="dropdown-menu relative">
               <a href="#" className='dropdown-menu-link text-white flex justify-between items-center gap-2 rounded-lg bg-neutral-700 px-2 py-1.5 text-sm'>
                 <div className="icon-wrap flex gap-1">
                   <img src={iconUnits} alt="" />
@@ -40,29 +42,31 @@ function App() {
           </div>
         </div>
       </header>
-      <section className='header'>
+      <section className='header mb-8'>
         <div className="container">
-          <h1>How's the sky looking today?</h1>
+          <h1 className='text-center text-white my-8'>How's the sky looking today?</h1>
           <form action="">
-            <div className="search-wrap">
-              <input type="search" name="search" id="search" placeholder='Search for a place...' />
+            <div className="search-wrap relative mb-3">
+              <img src={iconSearch} alt="" className='absolute left-[24px] top-5' />
+              <input type="search" name="search" id="search" placeholder='Search for a place...' className='w-full px-6 pl-15 py-4 rounded-lg bg-neutral-800 text-neutral-200'/>
             </div>
-            <button className='searh'>Search</button>
+            <button className='search w-full px-6 py-4 rounded-lg bg-blue-500 text-neutral-200 text-center'>Search</button>
           </form>
         </div>
       </section>
       <section className='main-content'>
         <div className="container">
-          <div className="main-weather-wrap">
-            <div className="grid-item highlighted">
+          <div className="main-weather-wrap grid gap-3.5 grid-cols-2">
+            <div className="grid-item highlighted rounded-3xl relative overflow-hidden col-span-2 px-6 py-11">
+              <img src={bgTodaySmall} alt="" className='lg:hidden absolute w-full h-full object-cover -z-10 top-0 left-0' />
               <div className="content-wrap">
-                <div className="title-wrap">
-                  <h2>Berlin, Germany</h2>
-                  <p className='date'>Tuesday, Aug 5, 2025</p>
+                <div className="title-wrap text-center text-white mb-6">
+                  <h2 className='mb-4'>Berlin, Germany</h2>
+                  <p className='date text-neutral-300'>Tuesday, Aug 5, 2025</p>
                 </div>
-                <div className="weather-info">
-                  <img src={iconSunny} alt="" srcset="" />
-                  <span>68°</span>
+                <div className="weather-info flex items-center justify-center text-white">
+                  <img src={iconSunny} alt="" srcset="" className='w-24'/>
+                  <span className='text text-8xl font-bold italic'>68°</span>
                 </div>
               </div>
             </div>
