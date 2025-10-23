@@ -3,6 +3,15 @@
 @import "./font.css";
 @import "./base.css";
 
+.dropdown-items input[type='radio']:checked ~ label{
+    @apply bg-neutral-700 bg-[url(./src/assets/images/icon-checkmark.svg)] bg-no-repeat;
+    background-position: calc(100% - 8px);
+}
+
+.day-items input[type='radio']:checked ~ label{
+    @apply bg-neutral-700;
+    background-position: calc(100% - 8px);
+}
 
 
 
