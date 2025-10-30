@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import Header from './components/Header'
+import Header from './components/header'
 import Search from './components/Search'
 import Main from './components/Main'
 
